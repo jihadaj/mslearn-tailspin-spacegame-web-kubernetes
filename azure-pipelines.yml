@@ -5,6 +5,7 @@ variables:
   leaderboardRepository: 'leaderboard'
   webRepository: 'web'
   tag: '$(Build.BuildId)'
+  release:'$(Release.Artifacts.{alias}.BuildId)'
   imagePullSecret: 'secret'
 
 stages:
@@ -51,7 +52,7 @@ stages:
         deploy:
           steps:
           - download: current
-            artifact: 
+            artifact: manifests
           - task: KubernetesManifest@0
             displayName: Create imagePullSecret
             inputs:
