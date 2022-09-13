@@ -5,7 +5,6 @@ variables:
   leaderboardRepository: 'leaderboard'
   webRepository: 'web'
   tag: '$(Build.BuildId)'
-  release:'$(Release.Artifacts.{alias}.BuildId)'
   imagePullSecret: 'secret'
 
 stages:
