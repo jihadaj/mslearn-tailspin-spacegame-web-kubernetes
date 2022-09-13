@@ -43,7 +43,7 @@ stages:
   - deployment: Deploy
     displayName: Deploy
     pool: 'pool11'
-    environment: 'spike.default'
+    environment: 'spike'
     variables:
     - group: Release
     strategy:
