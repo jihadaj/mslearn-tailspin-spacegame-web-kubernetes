@@ -51,7 +51,6 @@ stages:
         deploy:
           steps:
           - download: current
-            artifact: manifests
           - task: KubernetesManifest@0
             displayName: Create imagePullSecret
             inputs:
